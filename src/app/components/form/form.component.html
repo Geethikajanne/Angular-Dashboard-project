@@ -1,0 +1,29 @@
+<div class="form-container">
+  <input
+    type="text"
+    [(ngModel)]="name"
+    (ngModelChange)="onTyping()"
+    placeholder="Enter Name"
+    class="input"
+  />
+ 
+  <input
+    type="email"
+    [(ngModel)]="email"
+    (ngModelChange)="onTyping()"
+    placeholder="Enter Email"
+    class="input"
+    [ngClass]="{ invalid: email && !isValidEmail(email) }"
+  />
+ 
+  <button
+    type="button"
+    (click)="onSave()"
+    class="save-btn"
+  >
+    Save
+  </button>
+ 
+  <p *ngIf="emailError" class="error">{{ emailError }}</p>
+</div>
+ 

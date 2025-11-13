@@ -1,0 +1,25 @@
+<table border="1" width="100%" style="margin-top:20px; max-width:480px; margin-left:auto; margin-right:auto;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- show preview only when preview has some non-empty content -->
+    <tr *ngIf="previewUser && (previewUser.name?.trim() || previewUser.email?.trim())" style="font-style: italic; background:#f9f9f9;">
+      <td>{{ previewUser.name || '' }}</td>
+      <td>{{ previewUser.email || '' }}</td>
+    </tr>
+ 
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+ 
+    <!-- optional: show message when no saved users -->
+    <tr *ngIf="users.length === 0 && !(previewUser && (previewUser.name?.trim() || previewUser.email?.trim()))">
+      <td colspan="2" style="text-align:center; color:#777; padding:12px;">No users saved yet</td>
+    </tr>
+  </tbody>
+</table>

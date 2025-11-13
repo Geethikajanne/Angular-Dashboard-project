@@ -1,0 +1,4 @@
+<div class="dashboard">
+  <app-form (userAdded)="onAddUser($event)" (userTyping)="onUserTyping($event)"></app-form>
+  <app-table [users]="users" [previewUser]="previewUser"></app-table>
+</div>

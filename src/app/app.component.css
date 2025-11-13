@@ -1,0 +1,23 @@
+:host, html, body {
+  height: 100%;
+  margin: 0;
+}
+ 
+:host {
+  display: block;
+  min-height: 100vh;
+}
+ 
+/* Make root layout a flex column so footer sits at bottom */
+:host > .app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+ 
+.main-content {
+  flex: 1 0 auto; /* grow to fill remaining space */
+  padding: 20px;
+  background-color: #fafafa;
+}
+ 

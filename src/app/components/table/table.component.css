@@ -1,0 +1,11 @@
+.table-container {
+  margin-top: 1rem;
+}
+.edit-btn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
